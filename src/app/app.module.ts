@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router'; 
 import { FlashMessagesModule } from 'angular2-flash-messages';
 import { BsDropdownModule } from 'ngx-bootstrap';
+import { ProfileComponent } from './components/users/profile/profile.component';
 const Routes=[
   {
     path:'',component: HomeComponent
@@ -20,6 +21,9 @@ const Routes=[
   },
   {
     path:'login',component: LoginComponent
+  },
+  {
+    path:'profile',component: ProfileComponent
   }
 ];
 
@@ -31,7 +35,8 @@ const Routes=[
     NavbarTopComponent,
     HomeComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
     this.userService.authenticateUser(rf.value)
     .subscribe(data=>{
       if(data.success){
-        this.userService.storeUserDate(data.token,data.user);
+        console.log(data);
         this.flashMsg.show('You are Logged In',{ cssClass: 'alert-success',timeout: 3000})
         this.route.navigate(['/']);
       }else{
